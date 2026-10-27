@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://77i75dgdm45r"]
+
+[ext_resource type="Script" uid="uid://32u0eoasje1" path="res://weapon_base.gd" id="1_857ps"]
+[ext_resource type="Script" uid="uid://cf4jxgqfx6fr" path="res://weapon_visuals.gd" id="2_uw68t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o8hbq"]
+radius = 32.984844
+
+[node name="Revolver" type="Node2D" unique_id=701215533]
+script = ExtResource("1_857ps")
+weapon_name = "Revolver"
+damage = 25.0
+attack_duration = 0.1
+cooldown_duration = 0.0
+max_ammo = 6
+
+[node name="HitboxArea" type="Area2D" parent="." unique_id=719539554]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea" unique_id=9010019]
+shape = SubResource("CircleShape2D_o8hbq")
+
+[node name="WeaponVisuals" type="Node2D" parent="." unique_id=1902935307]
+script = ExtResource("2_uw68t")

@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://e56rlu824nyf"]
+
+[ext_resource type="Script" uid="uid://bh18dfyiub506" path="res://settings_menu.gd" id="1_0cmel"]
+[ext_resource type="FontFile" uid="uid://d4mdu7rcdhfm3" path="res://fonts/pixel.ttf" id="1_ufg0w"]
+
+[node name="SettingsMenu" type="MarginContainer" unique_id=1202640171]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0cmel")
+
+[node name="MainContainer" type="VBoxContainer" parent="." unique_id=1958923382]
+layout_mode = 2
+alignment = 1
+
+[node name="SettingsLabel" type="Label" parent="MainContainer" unique_id=1166413175]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ufg0w")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MainContainer" unique_id=1005869689]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="DisplaySettings" type="VBoxContainer" parent="MainContainer" unique_id=1101886625]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="DisplayModeLabel" type="Label" parent="MainContainer/DisplaySettings" unique_id=793134097]
+layout_mode = 2
+text = "Display Mode"
+horizontal_alignment = 1
+
+[node name="DisplayModeOption" type="OptionButton" parent="MainContainer/DisplaySettings" unique_id=1476271953]
+custom_maximum_size = Vector2(200, -1)
+layout_mode = 2
+button_mask = 0
+alignment = 1
+icon_alignment = 1
+selected = 0
+item_count = 3
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed Fullscreen"
+popup/item_1/id = 1
+popup/item_2/text = "Fullscreen"
+popup/item_2/id = 2
+
+[node name="ResolutionSettings" type="VBoxContainer" parent="MainContainer" unique_id=2012074971]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="ResolutionLabel" type="Label" parent="MainContainer/ResolutionSettings" unique_id=1533257598]
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResolutionOption" type="OptionButton" parent="MainContainer/ResolutionSettings" unique_id=81503575]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "1280x720"
+popup/item_0/id = 0
+popup/item_1/text = "1920x1080"
+popup/item_1/id = 1
+popup/item_2/text = "1280x800"
+popup/item_2/id = 2
+popup/item_3/text = "1600x900"
+popup/item_3/id = 3
+
+[node name="HSeparator2" type="HSeparator" parent="MainContainer" unique_id=2077905866]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="AudioSettings" type="VBoxContainer" parent="MainContainer" unique_id=413813812]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="AudioLabel" type="Label" parent="MainContainer/AudioSettings" unique_id=1700336754]
+layout_mode = 2
+text = "Audio"
+horizontal_alignment = 1
+
+[node name="MasterVolume" type="VBoxContainer" parent="MainContainer/AudioSettings" unique_id=1968009902]
+layout_mode = 2
+
+[node name="MasterLabel" type="Label" parent="MainContainer/AudioSettings/MasterVolume" unique_id=1422767148]
+layout_mode = 2
+text = "Master Volume"
+horizontal_alignment = 1
+
+[node name="MasterSlider" type="HSlider" parent="MainContainer/AudioSettings/MasterVolume" unique_id=1433784123]
+layout_mode = 2
+value = 80.0
+
+[node name="MusicVolume" type="VBoxContainer" parent="MainContainer/AudioSettings" unique_id=719606885]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="MainContainer/AudioSettings/MusicVolume" unique_id=643108406]
+layout_mode = 2
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="MainContainer/AudioSettings/MusicVolume" unique_id=101671014]
+layout_mode = 2
+value = 80.0
+
+[node name="SFXVolume" type="VBoxContainer" parent="MainContainer/AudioSettings" unique_id=98848493]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="MainContainer/AudioSettings/SFXVolume" unique_id=1304892179]
+layout_mode = 2
+text = "SFX Volume"
+horizontal_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="MainContainer/AudioSettings/SFXVolume" unique_id=1235391600]
+layout_mode = 2
+value = 80.0
+
+[node name="HSeparator3" type="HSeparator" parent="MainContainer" unique_id=1951814050]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MainContainer" unique_id=1588498296]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"

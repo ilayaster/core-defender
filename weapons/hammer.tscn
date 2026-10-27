@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bmtp20pb2ny62"]
+
+[ext_resource type="Script" uid="uid://32u0eoasje1" path="res://weapon_base.gd" id="1_yblfr"]
+[ext_resource type="Script" uid="uid://cf4jxgqfx6fr" path="res://weapon_visuals.gd" id="2_cskeu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e5ugw"]
+radius = 194.6484
+
+[node name="Hammer" type="Node2D" unique_id=701215533]
+script = ExtResource("1_yblfr")
+weapon_name = "Hammer"
+damage = 30.0
+windup_duration = 0.25
+attack_duration = 0.25
+
+[node name="HitboxArea" type="Area2D" parent="." unique_id=1119266697]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea" unique_id=1550136134]
+shape = SubResource("CircleShape2D_e5ugw")
+
+[node name="WeaponVisuals" type="Node2D" parent="." unique_id=1833254274]
+script = ExtResource("2_cskeu")

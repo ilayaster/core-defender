@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dlevi1oja34th"]
+
+[ext_resource type="Script" uid="uid://dotd8fe3yukfq" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="FontFile" uid="uid://d4mdu7rcdhfm3" path="res://fonts/pixel.ttf" id="2_feb5d"]
+
+[node name="Game" type="Node2D" unique_id=251387463]
+script = ExtResource("1_e2o6t")
+
+[node name="CoreSpawnPoint" type="Marker2D" parent="." unique_id=183150557]
+position = Vector2(608, 384)
+
+[node name="RoundTimer" type="Timer" parent="." unique_id=1284520066]
+wait_time = 600.0
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=2141965511]
+wait_time = 2.0
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=224304153]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=659526018]
+offset_left = 432.0
+offset_top = 24.0
+offset_right = 784.0
+offset_bottom = 64.0
+alignment = 1
+
+[node name="TimeLabel" type="Label" parent="UI/VBoxContainer" unique_id=1528221436]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_feb5d")
+theme_override_font_sizes/font_size = 32
+text = "Time: 10:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoreHealthLabel" type="Label" parent="UI/VBoxContainer" unique_id=1766172954]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_feb5d")
+theme_override_font_sizes/font_size = 24
+text = "Core HP: 100"
+horizontal_alignment = 1
+vertical_alignment = 1

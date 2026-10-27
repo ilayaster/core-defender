@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cc1p8e0j4ltp4"]
+
+[ext_resource type="Script" uid="uid://2cxkoxmfgeag" path="res://entities/core_base.gd" id="1_mtjhk"]
+[ext_resource type="Texture2D" uid="uid://e10ioxfyu52n" path="res://sprites/slow-core.png" id="2_pf4dx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7wdp"]
+radius = 28.0
+height = 56.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkb4j"]
+radius = 104.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e7wdp"]
+radius = 248.129
+
+[node name="SlowCore" type="Area2D" unique_id=1630302901]
+collision_mask = 2
+script = ExtResource("1_mtjhk")
+max_health = 150
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1113264454]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_pf4dx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=949656882]
+shape = SubResource("CapsuleShape2D_e7wdp")
+
+[node name="ExplosionArea" type="Area2D" parent="." unique_id=800019085]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea" unique_id=1236151726]
+shape = SubResource("CircleShape2D_gkb4j")
+debug_color = Color(0.82408434, 0.3997315, 0, 0.41960785)
+
+[node name="SlowAura" type="Area2D" parent="." unique_id=323050044]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlowAura" unique_id=1177356913]
+shape = SubResource("CircleShape2D_e7wdp")
+debug_color = Color(0.27323017, 0.5863392, 0.65721875, 0.41960785)

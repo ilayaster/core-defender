@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dl5eh4v7achxu"]
+
+[ext_resource type="Script" uid="uid://32u0eoasje1" path="res://weapon_base.gd" id="1_oivwf"]
+[ext_resource type="Script" uid="uid://cf4jxgqfx6fr" path="res://weapon_visuals.gd" id="2_nisn2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkb4j"]
+radius = 64.0
+
+[node name="Sword" type="Node2D" unique_id=701215533]
+script = ExtResource("1_oivwf")
+weapon_name = "Sword"
+damage = 15.0
+cooldown_duration = 0.3
+
+[node name="HitboxArea" type="Area2D" parent="." unique_id=772026077]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea" unique_id=1287505030]
+shape = SubResource("CircleShape2D_gkb4j")
+
+[node name="WeaponVisuals" type="Node2D" parent="." unique_id=213694713]
+script = ExtResource("2_nisn2")

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cdl22bmihjo2w"]
+
+[ext_resource type="Script" uid="uid://2cxkoxmfgeag" path="res://entities/core_base.gd" id="1_vuw3u"]
+[ext_resource type="Texture2D" uid="uid://fmwm0sfhdcfg" path="res://sprites/core-plosive.png" id="2_2y5ky"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gkb4j"]
+radius = 16.0
+height = 48.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gkb4j"]
+radius = 320.89874
+
+[node name="CorePlosive" type="Area2D" unique_id=1712402212]
+collision_mask = 2
+script = ExtResource("1_vuw3u")
+max_health = 80
+core_type = "plosive"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1823513464]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_2y5ky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1773772197]
+shape = SubResource("CapsuleShape2D_gkb4j")
+
+[node name="ExplosionArea" type="Area2D" parent="." unique_id=138785655]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea" unique_id=1134494680]
+shape = SubResource("CircleShape2D_gkb4j")
+debug_color = Color(0.8538704, 0.36965278, 7.70092e-07, 0.41960785)
